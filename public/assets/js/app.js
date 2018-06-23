@@ -55,7 +55,8 @@ $(document).ready(function () {
       $('#myspace').empty();
       $('#myspace').append(`<div class="alert alert-success text-center" role="alert"> Article Saved!!</div>`);
     }).catch((err) => {
-      console.log(err);
+      $('#myspace').empty();
+      $('#myspace').append(`<div class="alert alert-warning text-center" role="alert"> This article has already been saved!! </div>`);
     })
   });
 
