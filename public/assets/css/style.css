@@ -4,12 +4,18 @@ html body {
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222;
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(184, 184, 184);
 }
 
 .jumbotron {
   width: 100%;
-  height: 300px;
+  height: 280px;
+  background-color: rgb(73, 73, 73);
+}
+
+.modalText {
+  font-size: 20px;
+  color: #4bb689;
 }
 
 .myspace {
@@ -31,25 +37,11 @@ html body {
   font-size: 1.1em !important;
 }
 
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.carousel-caption h1 {
-  font-size: 500%;
-  text-shadow: 1px 1px 15px rgb(25, 32, 26);
-}
 
 .btn-primary {
-  background-color: #6648b1;
+  background-color: #a986ff;
   border: 1px solid #563d7c;
+  color: rgb(255, 255, 255);
 }
 
 .btn-primary:hover {
@@ -57,14 +49,16 @@ html body {
   border: 1px solid #563d7c;
 }
 
+.mybanner {
+  color: rgb(236, 239, 243);
+  font-size: 60px;
+  font-weight: bold;
+}
+
 .padding {
   padding-bottom: 2rem;
 }
 
-.post-btn {
-  background-color: #4bb689;
-  border: 1px solid #563d7c;
-}
 
 .fa-trash-alt {
   padding: 0 !important;
@@ -81,77 +75,6 @@ html body {
   flex-direction: column;
   min-height: 100vh;
 }
-
-
-/*---Media Queries --*/
-
-@media (max-width: 992px) {
-  .social a {
-    font-size: 3em;
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 35%;
-  }
-  .carousel-caption h1 {
-    font: 350%;
-  }
-  .carousel-caption .btn {
-    font-size: 95%;
-    padding: 8px 14px;
-  }
-  .social a {
-    font-size: 2.5em;
-    padding: 1.2rem;
-  }
-  .carousel-indicators {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .carousel-caption {
-    top: 30%;
-  }
-  .carousel-caption h1 {
-    font: 200%;
-  }
-  .carousel-caption .btn {
-    font-size: 90%;
-    padding: 4px 8px;
-  }
-  .social a {
-    font-size: 2em;
-    padding: .7rem;
-  }
-  .carousel-indicators {
-    display: none;
-  }
-}
-
-/*---Firefox Bug Fix --*/
-
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-
-/*--- Fixed Background Image --*/
-
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0 !important;
-}
-
-/*--- Bootstrap Padding Fix --*/
 
 [class*="col-"] {
   padding: 1rem;

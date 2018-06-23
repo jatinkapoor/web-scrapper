@@ -24,7 +24,7 @@ $(document).ready(function () {
                 <a name="article-link" class="btn btn-outline-success" type="button" href="${article.link}">Go To TechCrunch</a>
               </span>
               <span>
-                <button id="save-article" type="submit" class="btn btn-outline-success">Save Article</button>
+                <button id="save-article" type="submit" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal1">Save Article</button>
               </span>
             </div>
           </div> 
@@ -52,11 +52,11 @@ $(document).ready(function () {
       data: data
     }).then((response) => {
       console.log(response);
-      $('#myspace').empty();
-      $('#myspace').append(`<div class="alert alert-success text-center" role="alert"> Article Saved!!</div>`);
+      $('#mymodal').empty();
+      $('#mymodal').append(`<p>Article Saved!!</p>`);
     }).catch((err) => {
-      $('#myspace').empty();
-      $('#myspace').append(`<div class="alert alert-warning text-center" role="alert"> This article has already been saved!! </div>`);
+      $('#mymodal').empty();
+      $('#mymodal').append(`<p>This article has already been saved!!</p>`);
     })
   });
 

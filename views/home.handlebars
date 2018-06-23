@@ -10,11 +10,11 @@
     <ul class="navbar-nav mr-right">
       <li class="nav-item">
         <form class="form-inline my-2 my-lg-0">
-          <a href="/savedArticles" class="btn btn-outline-success" type="button">Saved Articles</a>
+          <a class="btn btn-outline-success btn-primary" href="/savedArticles" role="submit">Saved Articles</a>
         </form>
         <li class="nav-item">
           <form class="form-inline my-2 my-lg-0">
-            <button id="scrape-new" data-toggle="modal" data-target="#exampleModal1" class="btn btn-outline-success" type="submit">Scrape New Articles</button>
+            <button id="scrape-new" class="btn btn-outline-success btn-primary" type="submit">Scrape New Articles</button>
           </form>
         </li>
     </ul>
@@ -22,11 +22,28 @@
 </nav>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="text-center">TechCrunch Articles Scrapper</h1>
+    <h1 class="text-center mybanner">TechCrunch Articles Scrapper</h1>
   </div>
 </div>
 <div id="myspace" class="myspace">
   <div class="alert alert-warning text-center" role="alert"> Looks Like we don't have any new articles. </div>
 </div>
 <div id="myContainer"> </div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content mymodal">
+      <div class="modal-body">
+        <form id="my-notes-form">
+          <div class="form-group name">
+            <h3 class="modalText" id="mymodal"></h3>
+          </div>
+          <div class="modal-footer">
+            <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 

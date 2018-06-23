@@ -10,14 +10,14 @@
     <ul class="navbar-nav mr-right">
       <li class="nav-item">
         <form class="form-inline my-2 my-lg-0">
-          <a href="/" class="btn btn-outline-success" type="button">Home</a>
+          <a class="btn btn-outline-success btn-primary" href="/" role="submit">Home</a>
         </form>
     </ul>
   </div>
 </nav>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="text-center">Saved Articles</h1>
+    <h1 class="text-center mybanner">Saved Articles</h1>
   </div>
 </div>
 <div id="saved-articles-container">
@@ -31,7 +31,9 @@
         </div>
         <div>
           <span>
-            <a name="article-link" class="btn btn-outline-success" type="button" href="{{this.link}}">Go To TechCrunch</a>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-outline-success btn-primary" href="{{this.link}}" role="submit" target="_blank">Go To TechCrunch</a>
+          </form>
           </span>
           <span>
             <button id="notes-{{this._id}}" type="submit" class="btn btn-outline-success addnotes" data-toggle="modal" data-target="#exampleModal1">Article Notes</button>
@@ -47,7 +49,7 @@
   <br>
   <br>
   {{/each}}
-<div>
+
   <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content mymodal">
@@ -69,3 +71,4 @@
         </div>
       </div>
     </div>
+  </div>
