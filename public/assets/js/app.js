@@ -6,6 +6,9 @@ $(document).ready(function () {
   $('#scrape-new').on('click', function (event) {
     event.preventDefault();
     $.ajax(url = "/scrape", method = "GET").then((articles) => {
+      console.log('scrapped');
+      $('#myspace').empty();
+      $('#myspace').append(`<div class="alert alert-success text-center" role="alert"> Updated Page With ${articles.length} articles</div>`);
       $('#myContainer').empty();
       articles.map((article, index) => {
         $('#myContainer').append(` 
@@ -49,6 +52,8 @@ $(document).ready(function () {
       data: data
     }).then((response) => {
       console.log(response);
+      $('#myspace').empty();
+      $('#myspace').append(`<div class="alert alert-success text-center" role="alert"> Article Saved!!</div>`);
     }).catch((err) => {
       console.log(err);
     })
