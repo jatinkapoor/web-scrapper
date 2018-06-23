@@ -21,9 +21,7 @@ $(document).ready(function () {
             </div>
             <div>
               <span>
-                <form class="form-inline my-2 my-lg-0">
-                  <a class="btn btn-outline-success btn-primary" href="${article.link}" role="submit" target="_blank">Go To TechCrunch</a>
-                </form>
+                  <a class="btn btn-outline-success btn-primary" name="article-link" href="${article.link}" role="submit" target="_blank">Go To TechCrunch</a>
               </span>
               <span>
                 <button id="save-article" type="submit" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal1">Save Article</button>
