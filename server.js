@@ -27,8 +27,8 @@ app.use(express.static('public'));
 
 
 const db = require('./models');
-
-mongoose.connect("mongodb://127.0.0.1:27017/webScrapper");
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/webScrapper";
+mongoose.connect(MONGODB_URI);
 
 app.use('/', homeRouter);
 app.use('/scrape', scrapeRouter);
